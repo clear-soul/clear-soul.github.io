@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>正则过滤富文本html格式数据转变成文字</title>
+    <link href="/2022/01/18/hello-world/"/>
+    <url>/2022/01/18/hello-world/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 传入富文本参数</span><br> <span class="hljs-title function_">toText</span>(<span class="hljs-params">HTML</span>) &#123;<br>      <span class="hljs-keyword">const</span> input = <span class="hljs-variable constant_">HTML</span>;<br>      <span class="hljs-keyword">return</span> input.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&lt;(style|script|iframe)[^&gt;]*?&gt;[\s\S]+?&lt;\/\1\s*&gt;/gi</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&lt;[^&gt;]+?&gt;/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\s+/g</span>, <span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/ /g</span>, <span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&amp;ldquo;/g</span>, <span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&amp;rdquo;/g</span>, <span class="hljs-string">&#x27; &#x27;</span>)<br>        .<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&amp;nbsp;/ig</span>, <span class="hljs-string">&quot;&quot;</span>)<br>        .<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/&gt;/g</span>, <span class="hljs-string">&#x27; &#x27;</span>);<br>    &#125;,<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>正则</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
